@@ -1,0 +1,57 @@
+/*Radio*/
+.compare-type-item {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 24px;
+    user-select: none;
+}
+
+.compare-type-item input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.compare-type-item:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.compare-type-item input:checked ~ .checkmark {
+    background-color: #BF1E28;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.compare-type-item input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.compare-type-item .checkmark:after {
+    top: 8px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* /Radio */
